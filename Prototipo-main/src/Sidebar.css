@@ -1,0 +1,145 @@
+/* Sidebar Expansível */
+.sidebar1 {
+  width: 260px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #161939;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: width 0.3s ease;
+  overflow-y: scroll;
+  z-index: 999;
+}
+
+.sidebar1::-webkit-scrollbar {
+  display: none; /* Remove scrollbar visível */
+}
+
+.sidebar1.collapsed {
+  width: 60px;
+}
+
+.logo {
+  width: 100%;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+/* Menu Button */
+.menu-item1 {
+  margin-bottom: 10px;
+}
+
+.menu-button1 {
+  width: 100%;
+  padding: 10px;
+  text-align: left; /* Alinha o texto à esquerda */
+  border: none;
+  background: none; /* Remove background color */
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 300;
+  color: #FFFFFF;
+  letter-spacing: 0.5px;
+  transition: color 0.3s;
+}
+
+.menu-button1:hover {
+  color: #CFCFCF;
+}
+
+/* Sub-menu */
+.sub-menu1 {
+  padding-left: 20px; /* Adiciona espaçamento à esquerda */
+  margin-top: 5px;
+}
+
+.sub-menu-item1 {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  text-align: left; /* Alinha o texto à esquerda */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 300;
+  color: #CFCFCF;
+  transition: color 0.3s;
+}
+
+.sub-menu-item1:hover {
+  color: #FFFFFF;
+}
+
+/* Toggle Button */
+.toggle-button {
+  padding: 10px;
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.toggle-button:hover {
+  color: #CFCFCF;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 260px;
+  width: calc(100% - 260px);
+  height: 60px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1000;
+  transition: left 0.3s ease, width 0.3s ease;
+}
+
+.header-collapsed {
+  left: 60px;
+  width: calc(100% - 60px);
+}
+
+.header-title {
+  font-size: 24px;
+  font-family: 'Inter', sans-serif;
+  color: #161939;
+  flex: 1;
+}
+
+/* Search Field */
+.header-search {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.header-search-input {
+  width: 250px;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background-color: #f4f4f4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.header-search-input:focus {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-color: #a0a0a0;
+}
+
+/* Account Icon */
+.header-account-icon {
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+}
